@@ -1,3 +1,4 @@
+
 import pandas as pd
 import sys
 
@@ -18,6 +19,6 @@ def main():
     merged = merged[~insurance_mask]
 
     merged.to_csv(output_file, index=False)
-
+    print(f"Output file shape: {merged.shape[0]} rows, {merged.shape[1]} columns")
 if __name__ == '__main__':
     main()
